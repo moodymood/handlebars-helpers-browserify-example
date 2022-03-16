@@ -37,7 +37,7 @@ gulp.task('cleanDest', function(cb) {
 gulp.task('clean', gulp.parallel(['cleanPublish', 'cleanDest']));
 
 gulp.task('copy', function() {
-  return gulp.src('./src/index.html')
+  return gulp.src('./src/*')
     .pipe(gulp.dest('_gh_pages'))
     .pipe(browserSync.stream());
 });
@@ -55,6 +55,7 @@ gulp.task('serve', function(cb) {
 gulp.task('watch', function() {
   gulp.watch(['./src/**/*'], gulp.series('build'));
 });
+
 
 gulp.task('push', function() {
   return gulp.src('_gh_pages/**/*')

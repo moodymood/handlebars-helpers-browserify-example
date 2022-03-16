@@ -1,0 +1,20 @@
+
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.field__name {
+  font-weight: bold;
+}
+
+.field__value--array {
+  display: flex;
+}

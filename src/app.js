@@ -73,7 +73,7 @@ $(function() {
         }
       };
       var fn = Handlebars.compile(`
-        {{> (defaultView .)  wrapper.entity.customer1 }},
+        {{> (defaultView .)  wrapper.entity.customer1 }}
         {{> (defaultView .)  wrapper.entity.customer2 }}
       `);
       function render(data) {
